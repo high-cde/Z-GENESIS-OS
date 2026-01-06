@@ -1,234 +1,188 @@
-# 🐺 GHOSTTRACK  
-**La rinascita dello spirito BackTrack.  
-Un framework rituale, modulare e operativo.**
 
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
-[![Build](https://img.shields.io/badge/Build-GhostOps-black)]()
-[![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-blue)]()
-[![Identity](https://img.shields.io/badge/Identity-BackTrack%20Reborn-red)]()
+# 🌐 **GhostTrack – Global Observer Framework**  
+### _Ethical Awareness · OSINT Intelligence · Critical Surface Monitoring_
 
+GhostTrack è un sistema di **consapevolezza tecnica globale**, progettato per osservare il mondo digitale e fisico attraverso dati pubblici, segnali aperti e fonti OSINT certificate.  
+Non attacca, non simula intrusioni, non viola reti: **interpreta**, **correla**, **rivela**.
 
-📄 Whitepaper / README – Civil Resilience OS
-Titolo:
+GhostTrack nasce dalla tradizione BackTrack → Kali → GhostTrack, trasformando la cultura hacker in una disciplina etica di osservazione e analisi.
 
-Civil Resilience GhostTrack v2 – Piattaforma Operativa per Sicurezza, Continuità e Connettività in Scenari Critici
-1. Introduzione
+---
 
-Civil Resilience OS è una distribuzione Linux progettata per garantire sicurezza, autonomia e continuità operativa in contesti civili, professionali e di emergenza.
-L’obiettivo è fornire un ambiente affidabile che rimanga funzionale anche in condizioni di:
+## 🚀 **Missione**
+GhostTrack non è un tool di hacking.  
+È un **osservatore etico**, un motore di analisi che:
 
-    rete instabile o assente
+- monitora superfici critiche globali  
+- correla dati pubblici e open‑source  
+- identifica pattern anomali  
+- segnala rischi infrastrutturali  
+- supporta analisi OSINT avanzate  
+- mantiene un approccio 100% legale  
 
-    blackout prolungati
+GhostTrack non entra nei sistemi.  
+GhostTrack **vede ciò che gli altri ignorano**.
 
-    crisi infrastrutturali
+---
 
-    emergenze civili o naturali
+## 🧠 **Cosa fa GhostTrack**
+GhostTrack raccoglie e analizza **solo dati pubblici**, provenienti da fonti ufficiali e open‑source, tra cui:
 
-    necessità di comunicazioni sicure
+### 🔋 **Energia & Infrastrutture**
+- Open Data energetici nazionali  
+- Report pubblici di rete  
+- Indicatori di blackout  
+- Feed di stabilità infrastrutturale  
 
-La distro integra strumenti 100% legali, orientati alla difesa, alla resilienza digitale e alla connettività continua, senza includere componenti offensive o potenzialmente illegali.
-2. Filosofia del progetto
+### ✈️ **Traffico Aereo**
+- ADS‑B pubblico → https://www.adsbexchange.com  
+- NOTAM ufficiali → https://www.notams.faa.gov  
+- Meteo aeronautico  
 
-Civil Resilience OS si basa su quattro principi fondamentali:
-2.1 Sicurezza by Design
+### 🚢 **Traffico Marittimo**
+- AIS pubblico → https://www.marinetraffic.com  
+- Dati IMO  
+- Porti e logistica open‑data  
 
-Il sistema è costruito con un approccio “secure-by-default”, includendo:
+### 🛰️ **Satelliti & Orbite**
+- Cataloghi TLE → https://www.celestrak.com  
+- Alert collisioni  
+- Telemetria civile open  
 
-    cifratura completa del disco
+### 🏙️ **Infrastrutture Civili**
+- Open Data urbani  
+- Trasporti pubblici  
+- Servizi essenziali  
 
-    firewall preconfigurato
+### 📰 **Comunicati & News Ufficiali**
+- RSS istituzionali  
+- Agenzie stampa certificate  
+- Organismi internazionali  
 
-    sandboxing applicativo
+GhostTrack non raccoglie dati privati, non monitora individui, non accede a reti chiuse.
 
-    gestione sicura delle credenziali
+---
 
-2.2 Continuità Operativa
+## 🧩 **Architettura del GhostTrack Global Observer**
+GhostTrack è costruito su quattro livelli principali:
 
-La distro è progettata per mantenere la connettività e la funzionalità anche in condizioni avverse, grazie a:
+### **1. Raccolta Dati (OSINT Collector Layer)**  
+Moduli dedicati per ogni dominio: energia, voli, navi, satelliti, infrastrutture, news.
 
-    hotspot integrato
+### **2. Normalizzazione & Storage**  
+Tutti i dati vengono convertiti in un formato uniforme, indicizzati e archiviati in time‑series.
 
-    tethering avanzato
+### **3. Motore di Correlazione (Core Engine)**  
+- rilevamento anomalie  
+- correlazione multi‑settore  
+- analisi temporale  
+- calcolo rischio  
 
-    reti mesh locali
+### **4. Visualizzazione & Insight**  
+Dashboard, mappe, timeline, indicatori di rischio e report sintetici.
 
-    VPN resilienti
+---
 
-    strumenti offline-first
+## 🌍 **Perché GhostTrack è necessario**
+Viviamo in un mondo dove:
 
-2.3 Resilienza Civile
+- un tabaccaio ha un pannello operativo in rete  
+- una fabbrica chimica ha un’interfaccia web  
+- una centrale elettrica ha un dashboard remoto  
+- un porto ha un sistema di tracking  
+- un aeroporto trasmette dati pubblici  
+- una città intera vive su open data  
 
-Il sistema include strumenti utili in scenari di emergenza:
+Ogni pannello è una **leva sul mondo reale**.  
+Ogni interfaccia è un punto critico.  
+Ogni dato pubblico è un segnale.
 
-    mappe offline
+GhostTrack non vuole violare nulla.  
+GhostTrack vuole **capire**.
 
-    comunicazioni locali senza Internet
+---
 
-    sincronizzazione P2P
+## 🔒 **Etica & Legalità**
+GhostTrack è progettato per essere:
 
-    servizi locali di comunità
+- **100% legale**  
+- **100% OSINT**  
+- **100% passivo**  
+- **0% intrusivo**  
 
-2.4 Legalità e Trasparenza
+Non accede a reti private.  
+Non intercetta comunicazioni.  
+Non analizza password.  
+Non simula attacchi.  
+Non monitora individui.
 
-Tutti i componenti sono open-source e legalmente utilizzabili.
-Non sono inclusi strumenti di hacking offensivo, cracking o intrusioni.
-3. Architettura del Sistema
+GhostTrack è un **sistema di consapevolezza**, non un framework offensivo.
 
-Civil Resilience OS è organizzata in moduli funzionali, ognuno dei quali può essere aggiornato o esteso in modo indipendente.
-4. Modulo: CIV-CONNECT (Always-On Connectivity)
+---
 
-Il cuore della distro.
-Progettato per garantire la massima probabilità di connessione legale in ogni situazione.
-4.1 Gestione Wi‑Fi avanzata
+## 🧭 **Moduli Principali**
+### 🔹 **EnergyWatch**  
+Analisi pubblica di flussi energetici, blackout, stress di rete.
 
-    auto-scan reti disponibili
+### 🔹 **FlightWatch**  
+Monitoraggio voli, NOTAM, deviazioni, congestioni.
 
-    priorità configurabili (casa → tethering → free Wi‑Fi)
+### 🔹 **MarineWatch**  
+Analisi rotte marittime, porti, anomalie logistiche.
 
-    riconoscimento automatico captive portal
+### 🔹 **SatWatch**  
+Osservazione orbite, passaggi, densità satellitare.
 
-4.2 Hotspot personale
+### 🔹 **CivInfraWatch**  
+Trasporti, servizi, open data urbani.
 
-    creazione immediata di un access point protetto
+### 🔹 **NewsIntel**  
+Correlazione tra eventi tecnici e comunicati ufficiali.
 
-    condivisione connessione via Ethernet, Wi‑Fi o modem
+---
 
-4.3 Modem e tethering
+## 🧬 **Filosofia**
+GhostTrack nasce da un principio semplice:
 
-    supporto completo per chiavette 4G/5G
+> **“La tecnologia non è un’arma.  
+> La tecnologia è un linguaggio.  
+> E noi dobbiamo imparare ad ascoltarlo.”**
 
-    tethering USB/Wi‑Fi/Bluetooth
+GhostTrack non attacca.  
+GhostTrack osserva.  
+GhostTrack interpreta.  
+GhostTrack racconta.
 
-    rilevamento automatico smartphone come sorgente rete
+---
 
-4.4 Reti mesh locali
+## 📚 **Licenze Esterne & Tool OSINT Consigliati**
+GhostTrack non integra direttamente tool esterni, ma supporta l’uso di fonti OSINT ufficiali:
 
-    supporto B.A.T.M.A.N. o equivalenti
+- 🌐 **Celestrak (TLE Satelliti)**  
+  https://www.celestrak.com  
 
-    chat locale web
+- ✈️ **ADS‑B Exchange (Traffico Aereo)**  
+  https://www.adsbexchange.com  
 
-    bacheca messaggi offline
+- 🚢 **MarineTraffic (AIS Pubblico)**  
+  https://www.marinetraffic.com  
 
-4.5 VPN e connessioni resilienti
+- 🛰️ **Heavens‑Above (Orbital Tracking)**  
+  https://www.heavens-above.com  
 
-    profili OpenVPN e WireGuard
+- 📰 **Governi & Agenzie Ufficiali (RSS)**  
+  Es. Protezione Civile, FAA, EASA, NOAA  
 
-    mosh per sessioni stabili anche con rete intermittente
+Tutti i link rimandano a servizi con licenza esterna e termini d’uso propri.
 
-5. Modulo: SECURE-CORE (Protezione e Privacy)
-5.1 Sicurezza del dispositivo
+---
 
-    cifratura LUKS2
+## 🌟 **Conclusione**
+GhostTrack non è un tool.  
+Non è un framework.  
+Non è un OS.
 
-    firewall nftables
-
-    sandbox Firejail
-
-    password manager offline
-
-5.2 Comunicazioni sicure
-
-    Signal Desktop
-
-    Element (Matrix)
-
-    Session (opzionale)
-
-6. Modulo: FORENSICS & MONITOR (Analisi e Diagnostica)
-6.1 Monitoraggio
-
-    OSQuery
-
-    auditd
-
-    strumenti di log avanzati
-
-6.2 Analisi rete
-
-    Wireshark (uso legale)
-
-    tcpdump
-
-    nmap per diagnostica interna
-
-7. Modulo: CIV-TOOLS (Strumenti di Sopravvivenza Digitale)
-7.1 Mappe offline
-
-    OpenStreetMap offline
-
-    Marble / OsmAnd Desktop
-
-7.2 Sincronizzazione e servizi locali
-
-    Syncthing P2P
-
-    server locale per note e file (Nextcloud locale opzionale)
-
-7.3 Modalità offline-first
-
-    email con invio differito
-
-    repository aggiornamenti offline
-
-8. Scenari d’Uso
-Scenario A – Città con rete disponibile
-
-    connessione automatica a reti fidate
-
-    gestione captive portal
-
-    hotspot per condividere la connessione
-
-Scenario B – Rete instabile
-
-    tethering USB
-
-    modem 4G/5G
-
-    VPN resiliente
-
-    mosh per sessioni persistenti
-
-Scenario C – Nessuna Internet
-
-    rete mesh locale
-
-    chat e bacheca offline
-
-    mappe e documenti offline
-
-    sincronizzazione P2P
-
-9. Legalità e Responsabilità
-
-Civil Resilience OS è progettata per:
-
-    uso civile
-
-    protezione personale
-
-    continuità operativa
-
-    comunicazioni sicure
-
-    resilienza in emergenza
-
-Non include strumenti di attacco, cracking o intrusione.
-L’utente è responsabile dell’uso conforme alle leggi del proprio paese.
-10. Roadmap
-
-    v1.0 – Base system + CIV-CONNECT
-
-    v1.1 – Modulo mesh + mappe offline
-
-    v1.2 – Modulo forensics & monitor
-
-    v1.3 – Documentazione offline integrata
-
-    v2.0 – Versione LTS con supporto esteso
-
-11. Conclusione
-
-GhostTrack v2 OS nasce per offrire una piattaforma robusta, sicura e autonoma, capace di funzionare anche quando le infrastrutture tradizionali falliscono.
-È uno strumento pensato per cittadini, operatori, volontari, tecnici e comunità che vogliono essere preparati a scenari complessi senza violare alcuna legge.
+GhostTrack è una **coscienza tecnica**.  
+Un osservatore globale.  
+Un interprete del mondo.  
+Una costellazione viva di moduli, segnali e rituali.
