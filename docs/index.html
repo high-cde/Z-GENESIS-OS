@@ -27,9 +27,32 @@ section {
     padding: 20px;
 }
 
+/* GRID MONITOR */
+.monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+/* BOX GENERICO */
+.box {
+    background: rgba(0, 20, 20, 0.6);
+    border: 1px solid #00ffee;
+    padding: 12px;
+    border-radius: 8px;
+    min-height: 120px;
+}
+
+/* TITOLI BOX */
+.box h3 {
+    margin-top: 0;
+    font-size: 14px;
+    color: #00ffea;
+}
+
 /* TELEMETRIA BOX */
 #telemetry-box {
-    background: rgba(0, 20, 20, 0.6);
+    background: rgba(0, 20, 20, 0.9);
     border: 1px solid #00ffee;
     padding: 15px;
     border-radius: 8px;
@@ -76,6 +99,18 @@ section {
 .gt-menu-item:hover {
   color: #ffffff;
 }
+
+/* PICCOLI TAG DI STATO */
+.tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-right: 4px;
+}
+.tag-on { border: 1px solid #00ff00; color: #00ff00; }
+.tag-off { border: 1px solid #ff0040; color: #ff0040; }
+.tag-wait { border: 1px solid #ffaa00; color: #ffaa00; }
 </style>
 </head>
 
@@ -84,23 +119,147 @@ section {
 <header>
     <h1>🌌 GhostTrack‑v2</h1>
     <h2>Nodo Pragone — Pietra de’ Giorgi</h2>
+    <div style="font-size:12px;color:#00aa99;">
+        Costellazione etica di osservazione distribuita — versione nodo locale
+    </div>
 </header>
 
 <section>
-    <h3>📡 Telemetria del Nodo</h3>
+    <h2>📡 Telemetria del Nodo</h2>
     <div id="telemetry-box">
         Caricamento telemetria...
     </div>
 
-    <h3>🌍 Live Atlas</h3>
-    <p>Il globo 3D verrà integrato qui. La struttura è già predisposta.</p>
+    <h2>🛰 Plancia di Nodo</h2>
+    <div class="monitor-grid">
 
-    <h3>🛰 Stato del Nodo</h3>
-    <ul>
-        <li>Modalità: Offline‑First</li>
-        <li>Rituali: Master, Omega, Telemetry, Full, Repair</li>
-        <li>Sync: GitHub Pages</li>
-    </ul>
+        <!-- LIVE STREAM -->
+        <div class="box">
+            <h3>🎥 Live Stream / Osservazione</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot dedicato a flussi live (cam, SDR, stream remoti).<br>
+                Può ospitare: link YouTube, iframe, snapshot, o un player WebRTC.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di sorgente live.
+            </p>
+        </div>
+
+        <!-- BOINC -->
+        <div class="box">
+            <h3>🧮 BOINC / Calcolo Distribuito</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot per mostrare lo stato dei task BOINC associati al nodo.<br>
+                Esempio: progetti attivi, crediti, ultimi risultati.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di integrazione con client BOINC.
+            </p>
+        </div>
+
+        <!-- SETI / RADIO -->
+        <div class="box">
+            <h3>📡 SETI / Radio / Deep Scan</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot per visualizzare attività di ascolto radio, SETI, SDR, spettrogrammi o log di scansione.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di feed radio / SETI.
+            </p>
+        </div>
+
+        <!-- METEO -->
+        <div class="box">
+            <h3>⛅ Meteo Locale / AgroWatch</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot per sensori meteo, dati agricoli, microclima, pluviometri, vento, umidità, suolo.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di integrazione con sensori o API meteo.
+            </p>
+        </div>
+
+        <!-- STARLINK / LINK DI NODO -->
+        <div class="box">
+            <h3>🛰 Starlink / Link di Nodo</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot per mostrare stato del link Starlink, latenza, uptime, qualità del segnale, fallback.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di hook con la seconda antenna / mesh.
+            </p>
+        </div>
+
+        <!-- CHAT / SOCIAL / FEED -->
+        <div class="box">
+            <h3>💬 Chat / Feed / Eventi</h3>
+            <div>
+                <span class="tag tag-wait">PLACEHOLDER</span>
+            </div>
+            <p>
+                Slot per log di eventi, feed di sistema, eventuali canali pubblici (Matrix, XMPP, ecc.).
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: in attesa di sorgente eventi / chat.
+            </p>
+        </div>
+
+        <!-- LOG DI NODO -->
+        <div class="box">
+            <h3>📜 Log di Nodo</h3>
+            <div>
+                <span class="tag tag-on">ATTIVO</span>
+            </div>
+            <p id="node-log">
+                Questo slot può mostrare estratti da <code>var/</code>, <code>logs/</code> o output dei rituali.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: pronto per integrazione con ghosttrack_html_sync.sh.
+            </p>
+        </div>
+
+        <!-- STATO MODULI -->
+        <div class="box">
+            <h3>🧩 Stato Moduli GhostTrack</h3>
+            <div>
+                <span class="tag tag-on">CORE</span>
+                <span class="tag tag-on">OPS</span>
+                <span class="tag tag-on">SYSTEM</span>
+                <span class="tag tag-wait">AGRO</span>
+                <span class="tag tag-wait">ORBITAL</span>
+                <span class="tag tag-wait">SPORT</span>
+            </div>
+            <p>
+                Riepilogo simbolico dei moduli principali.<br>
+                I tag possono essere aggiornati dinamicamente in futuro.
+            </p>
+            <p style="font-size:11px;color:#00aa99;">
+                Stato: base attiva, moduli estesi in attesa di attivazione.
+            </p>
+        </div>
+
+    </div>
+
+    <h2 style="margin-top:30px;">🌍 Live Atlas</h2>
+    <p>
+        Il globo 3D e le mappe dinamiche verranno integrati qui.<br>
+        La sezione è predisposta per WebGL / Leaflet / Cesium.
+    </p>
 </section>
 
 <!-- MENU FLOATING -->
@@ -160,7 +319,7 @@ function gtShowSystem() {
 }
 
 function gtSurprise() {
-  alert("✨ Sorpresa!\nIl nodo Pragone è ora parte della costellazione.\nOgni gesto è un battito.\nOgni rituale è un respiro.");
+  alert("✨ Sorpresa!\nIl nodo Pragone è ora parte della costellazione.\nOgni slot è un futuro battito.\nOgni placeholder è una promessa.");
 }
 
 /* AUTOLOAD */
