@@ -3,329 +3,355 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GhostTrack‑v2 — Nodo Pragone</title>
-
+<title>GhostTrack‑v2 — Cosmic Node Dashboard</title>
 <style>
-body {
-    background: #000;
-    color: #00ffee;
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-}
-
-/* HEADER */
-header {
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #003f3f;
-    background: #020202;
-}
-
-/* SECTION */
-section {
-    padding: 20px;
-}
-
-/* GRID MONITOR */
-.monitor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 15px;
-}
-
-/* BOX GENERICO */
-.box {
-    background: rgba(0, 20, 20, 0.6);
-    border: 1px solid #00ffee;
-    padding: 12px;
-    border-radius: 8px;
-    min-height: 120px;
-}
-
-/* TITOLI BOX */
-.box h3 {
-    margin-top: 0;
-    font-size: 14px;
-    color: #00ffea;
-}
-
-/* TELEMETRIA BOX */
-#telemetry-box {
-    background: rgba(0, 20, 20, 0.9);
-    border: 1px solid #00ffee;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/* MENU FLOATING */
-#gt-menu-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #0a0a0a;
-  color: #00ffea;
-  padding: 12px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: monospace;
-  font-size: 14px;
-  border: 1px solid #00ffea;
-  z-index: 9999;
-}
-
-#gt-menu-panel {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  width: 260px;
-  background: rgba(0,0,0,0.92);
-  border: 1px solid #00ffea;
-  border-radius: 8px;
-  padding: 15px;
-  display: none;
-  z-index: 9999;
-  font-family: monospace;
-  color: #00ffea;
-}
-
-.gt-menu-item {
-  padding: 8px 0;
-  cursor: pointer;
-  border-bottom: 1px solid #003f3f;
-}
-
-.gt-menu-item:hover {
-  color: #ffffff;
-}
-
-/* PICCOLI TAG DI STATO */
-.tag {
-    display: inline-block;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 10px;
-    margin-right: 4px;
-}
-.tag-on { border: 1px solid #00ff00; color: #00ff00; }
-.tag-off { border: 1px solid #ff0040; color: #ff0040; }
-.tag-wait { border: 1px solid #ffaa00; color: #ffaa00; }
+body { margin:0; font-family:system-ui, sans-serif; background:#050711; color:#e5f7ff; }
+header { padding:16px; text-align:center; border-bottom:1px solid #1b2235; background:radial-gradient(circle at top,#1b2a4a,#050711); }
+h1 { margin:0; font-size:22px; }
+h2 { margin:0; font-size:14px; opacity:0.8; }
+#tabs { display:flex; flex-wrap:wrap; border-bottom:1px solid #1b2235; background:#070a16; }
+.tab { flex:1 1 50%; padding:10px; text-align:center; cursor:pointer; font-size:13px; border-right:1px solid #1b2235; border-bottom:1px solid #1b2235; }
+.tab:nth-child(2n) { border-right:none; }
+.tab.active { background:#11182b; color:#7fffd4; font-weight:600; }
+section { padding:14px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:10px; }
+.card { background:#0b1020; border:1px solid #1b2235; border-radius:8px; padding:10px; font-size:12px; }
+.card h3 { margin:0 0 6px 0; font-size:13px; color:#7fffd4; }
+.badge { display:inline-block; padding:2px 6px; border-radius:4px; font-size:10px; margin:2px 2px 0 0; border:1px solid #2f3c5f; }
+.badge-ok { border-color:#00c853; color:#00c853; }
+.badge-warn { border-color:#ffb300; color:#ffb300; }
+.badge-off { border-color:#546e7a; color:#546e7a; }
+pre { background:#050814; padding:8px; border-radius:6px; overflow:auto; font-size:11px; }
+.small { font-size:11px; opacity:0.8; }
+a { color:#7fffd4; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.tagline { font-size:11px; opacity:0.7; margin-top:4px; }
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>🌌 GhostTrack‑v2</h1>
-    <h2>Nodo Pragone — Pietra de’ Giorgi</h2>
-    <div style="font-size:12px;color:#00aa99;">
-        Costellazione etica di osservazione distribuita — versione nodo locale
-    </div>
+  <h1>🌌 GhostTrack‑v2</h1>
+  <h2>Cosmic Node Dashboard — Pragone Constellation</h2>
+  <div class="tagline">Osservazione etica · Territorio · Orbita · Radio · Reti · AI locale · Citizen Science</div>
 </header>
 
-<section>
-    <h2>📡 Telemetria del Nodo</h2>
-    <div id="telemetry-box">
-        Caricamento telemetria...
-    </div>
-
-    <h2>🛰 Plancia di Nodo</h2>
-    <div class="monitor-grid">
-
-        <!-- LIVE STREAM -->
-        <div class="box">
-            <h3>🎥 Live Stream / Osservazione</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot dedicato a flussi live (cam, SDR, stream remoti).<br>
-                Può ospitare: link YouTube, iframe, snapshot, o un player WebRTC.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di sorgente live.
-            </p>
-        </div>
-
-        <!-- BOINC -->
-        <div class="box">
-            <h3>🧮 BOINC / Calcolo Distribuito</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot per mostrare lo stato dei task BOINC associati al nodo.<br>
-                Esempio: progetti attivi, crediti, ultimi risultati.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di integrazione con client BOINC.
-            </p>
-        </div>
-
-        <!-- SETI / RADIO -->
-        <div class="box">
-            <h3>📡 SETI / Radio / Deep Scan</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot per visualizzare attività di ascolto radio, SETI, SDR, spettrogrammi o log di scansione.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di feed radio / SETI.
-            </p>
-        </div>
-
-        <!-- METEO -->
-        <div class="box">
-            <h3>⛅ Meteo Locale / AgroWatch</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot per sensori meteo, dati agricoli, microclima, pluviometri, vento, umidità, suolo.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di integrazione con sensori o API meteo.
-            </p>
-        </div>
-
-        <!-- STARLINK / LINK DI NODO -->
-        <div class="box">
-            <h3>🛰 Starlink / Link di Nodo</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot per mostrare stato del link Starlink, latenza, uptime, qualità del segnale, fallback.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di hook con la seconda antenna / mesh.
-            </p>
-        </div>
-
-        <!-- CHAT / SOCIAL / FEED -->
-        <div class="box">
-            <h3>💬 Chat / Feed / Eventi</h3>
-            <div>
-                <span class="tag tag-wait">PLACEHOLDER</span>
-            </div>
-            <p>
-                Slot per log di eventi, feed di sistema, eventuali canali pubblici (Matrix, XMPP, ecc.).
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: in attesa di sorgente eventi / chat.
-            </p>
-        </div>
-
-        <!-- LOG DI NODO -->
-        <div class="box">
-            <h3>📜 Log di Nodo</h3>
-            <div>
-                <span class="tag tag-on">ATTIVO</span>
-            </div>
-            <p id="node-log">
-                Questo slot può mostrare estratti da <code>var/</code>, <code>logs/</code> o output dei rituali.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: pronto per integrazione con ghosttrack_html_sync.sh.
-            </p>
-        </div>
-
-        <!-- STATO MODULI -->
-        <div class="box">
-            <h3>🧩 Stato Moduli GhostTrack</h3>
-            <div>
-                <span class="tag tag-on">CORE</span>
-                <span class="tag tag-on">OPS</span>
-                <span class="tag tag-on">SYSTEM</span>
-                <span class="tag tag-wait">AGRO</span>
-                <span class="tag tag-wait">ORBITAL</span>
-                <span class="tag tag-wait">SPORT</span>
-            </div>
-            <p>
-                Riepilogo simbolico dei moduli principali.<br>
-                I tag possono essere aggiornati dinamicamente in futuro.
-            </p>
-            <p style="font-size:11px;color:#00aa99;">
-                Stato: base attiva, moduli estesi in attesa di attivazione.
-            </p>
-        </div>
-
-    </div>
-
-    <h2 style="margin-top:30px;">🌍 Live Atlas</h2>
-    <p>
-        Il globo 3D e le mappe dinamiche verranno integrati qui.<br>
-        La sezione è predisposta per WebGL / Leaflet / Cesium.
-    </p>
-</section>
-
-<!-- MENU FLOATING -->
-<div id="gt-menu-btn">☰ GhostTrack</div>
-
-<div id="gt-menu-panel">
-  <div class="gt-menu-item" onclick="gtShowTelemetry()">📡 Telemetria</div>
-  <div class="gt-menu-item" onclick="gtShowNodeInfo()">🛰 Nodo Pragone</div>
-  <div class="gt-menu-item" onclick="gtShowAtlas()">🌍 Live Atlas</div>
-  <div class="gt-menu-item" onclick="gtShowSystem()">⚙ Sistema</div>
-  <div class="gt-menu-item" onclick="gtSurprise()">✨ Sorpresa</div>
+<div id="tabs">
+  <div class="tab active" data-target="mission">🛰 Mission Control</div>
+  <div class="tab" data-target="env">🌍 Environment & Agro</div>
+  <div class="tab" data-target="cyber">🛡 Security & Network</div>
+  <div class="tab" data-target="space">📡 Orbital & Starlink</div>
+  <div class="tab" data-target="maps">🗺 Offline Maps & GPS</div>
+  <div class="tab" data-target="media">🔥 Media Hub</div>
+  <div class="tab" data-target="chat">💬 BiChat Retro</div>
+  <div class="tab" data-target="academy">🎓 Academy & Docs</div>
+  <div class="tab" data-target="citizen">✨ Citizen Science</div>
+  <div class="tab" data-target="astro">🔭 Astro‑Telemetria</div>
 </div>
 
+<!-- MISSION CONTROL -->
+<section id="mission" class="panel">
+  <h2>🛰 Mission Control — System & Telemetry</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📡 Telemetria Nodo</h3>
+      <p><b>Uptime:</b> demo<br>
+         <b>Load Avg:</b> demo<br>
+         <b>Disco:</b> demo<br>
+         <b>IP:</b> demo<br>
+         <b>Status:</b> <span class="badge badge-ok">OK</span></p>
+      <p class="small">Questa sezione può essere collegata a un file JSON di telemetria generato dal nodo.</p>
+    </div>
+    <div class="card">
+      <h3>🧱 Sistema Core</h3>
+      <p>
+        <span class="badge badge-ok">NodeCore</span>
+        <span class="badge badge-ok">RitualEngine</span>
+        <span class="badge badge-ok">TelemetryCore</span><br>
+        <span class="badge badge-ok">LogEngine</span>
+        <span class="badge badge-ok">ConfigSystem</span><br>
+        <span class="badge badge-warn">RepairEngine</span>
+        <span class="badge badge-ok">SyncEngine</span>
+      </p>
+      <p class="small">Stato logico dei moduli core. In futuro: link a log dettagliati.</p>
+    </div>
+    <div class="card">
+      <h3>🔧 Ritualità</h3>
+      <pre>
+MasterRitual   ✔ ultima esecuzione: demo
+FullRitual     ✔ ultima esecuzione: demo
+OmegaRitual    ⏳ in attesa
+AutoSync       ✔ attivo
+SuperCommit    ✔ attivo
+      </pre>
+      <p class="small">Rituali come pipeline operative: telemetria, sync, commit, pubblicazione.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENVIRONMENT & AGRO -->
+<section id="env" class="panel" style="display:none;">
+  <h2>🌍 Environment & Agro</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌡 Microclima</h3>
+      <p><b>Temperatura:</b> demo<br>
+         <b>Umidità:</b> demo<br>
+         <b>Pressione:</b> demo<br>
+         <b>Vento:</b> demo</p>
+      <p class="small">Dati da sensori locali o API offline‑friendly.</p>
+    </div>
+    <div class="card">
+      <h3>🌾 AgroWatch</h3>
+      <p>
+        <span class="badge badge-ok">SoilSense</span>
+        <span class="badge badge-ok">RainPulse</span>
+        <span class="badge badge-warn">WindWatch</span><br>
+        <span class="badge badge-off">ForestGuard</span>
+        <span class="badge badge-off">GeoSentinel</span>
+      </p>
+      <p class="small">Moduli per suolo, pioggia, vento, foresta, geosentinella.</p>
+    </div>
+    <div class="card">
+      <h3>📘 Field Notes</h3>
+      <pre>
+[Evento] 2026-01-08 16:11
+Luogo: Pragone
+Note: microclima stabile, vento leggero.
+      </pre>
+      <p class="small">Spazio per note manuali su territorio, colture, fenomeni locali.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY & NETWORK -->
+<section id="cyber" class="panel" style="display:none;">
+  <h2>🛡 Security & Network</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🔐 CyberDefense</h3>
+      <p>
+        <span class="badge badge-ok">CyberDefense Core</span>
+        <span class="badge badge-ok">ThreatWatch</span><br>
+        <span class="badge badge-ok">Intrusion Sentinel</span>
+        <span class="badge badge-ok">Network Shield</span><br>
+        <span class="badge badge-warn">ZeroTrust Layer</span>
+        <span class="badge badge-ok">Integrity Guardian</span>
+      </p>
+      <p class="small">Monitoraggio logico di sicurezza. In futuro: link a report dettagliati.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Reti & Mesh</h3>
+      <p>
+        <span class="badge badge-ok">MeshNode</span>
+        <span class="badge badge-ok">LinkWatch</span><br>
+        <span class="badge badge-ok">MultiWAN Engine</span>
+        <span class="badge badge-warn">Fallback System</span>
+      </p>
+      <p class="small">Stato connettività, mesh, multi‑WAN. Ideale per scenari rurali.</p>
+    </div>
+    <div class="card">
+      <h3>🕳 Anonimato & Routing</h3>
+      <p>
+        <span class="badge badge-ok">TorNode</span>
+        <span class="badge badge-off">I2PNode</span><br>
+        <span class="badge badge-ok">PrivacyMesh</span>
+        <span class="badge badge-warn">StealthRoute</span>
+      </p>
+      <p class="small">Routing privato e anonimato, documentato e sotto controllo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORBITAL & STARLINK -->
+<section id="space" class="panel" style="display:none;">
+  <h2>📡 Orbital & Starlink</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🛰 OrbitalWatch</h3>
+      <p>
+        <span class="badge badge-ok">Satellite Tracker</span>
+        <span class="badge badge-ok">TLE Engine</span><br>
+        <span class="badge badge-warn">SpaceWeather Monitor</span>
+        <span class="badge badge-ok">StarlinkNode</span>
+      </p>
+      <p class="small">Supporto informativo a orbite, TLE, costellazioni.</p>
+    </div>
+    <div class="card">
+      <h3>🗺 Mappa Orbite (demo)</h3>
+      <pre>
+[●] Nodo Pragone
+[✶] Orbita Starlink (simbolica)
+[✶] Orbita LEO generica
+      </pre>
+      <p class="small">In futuro: integrazione con visualizzazioni 2D/3D.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFLINE MAPS & GPS -->
+<section id="maps" class="panel" style="display:none;">
+  <h2>🗺 Offline Maps & GPS</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📍 GPS Nodo</h3>
+      <p><b>Lat:</b> demo<br>
+         <b>Lon:</b> demo<br>
+         <b>Altitudine:</b> demo</p>
+      <p class="small">In futuro: lettura GPS locale del dispositivo.</p>
+    </div>
+    <div class="card">
+      <h3>🗺 Mappa Offline (concetto)</h3>
+      <pre>
+[██] Tiles OSM offline
+[●] Nodo Pragone
+[○] Punto osservazione
+      </pre>
+      <p class="small">Supporto concettuale a mappe offline basate su dati OSM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA HUB -->
+<section id="media" class="panel" style="display:none;">
+  <h2>🔥 Media Hub (RedBull TV 6 — concetto)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📺 Canale Sportivo</h3>
+      <p class="small">
+        Sezione dedicata a contenuti sportivi e dinamici.<br>
+        Qui puoi inserire link a fonti ufficiali o embed legali.
+      </p>
+      <p class="small">
+        Esempio link:<br>
+        <a href="#" onclick="alert('Placeholder link');return false;">Apri canale demo</a>
+      </p>
+    </div>
+    <div class="card">
+      <h3>🎥 Snapshot & Media</h3>
+      <pre>
+[Media] snapshot_2026-01-08_16-11.jpg
+[Media] field_photo_01.jpg
+      </pre>
+      <p class="small">Spazio per foto e media caricati manualmente dall’utente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BICHAT RETRO -->
+<section id="chat" class="panel" style="display:none;">
+  <h2>💬 BiChat Retro SIP Root</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📡 SIP-ROOT CHANNEL</h3>
+      <pre>[SIP-ROOT] > handshake OK
+[SIP-ROOT] > nodo Pragone registrato
+[SIP-ROOT] > latenza media: demo</pre>
+    </div>
+    <div class="card">
+      <h3>💬 BiChat Local</h3>
+      <pre>[BiChat] 14:22 > Nodo: pronto.
+[BiChat] 14:22 > Utente: stato moduli?
+[BiChat] 14:22 > Nodo: demo.</pre>
+    </div>
+    <div class="card">
+      <h3>🛰 GhostFeed Live</h3>
+      <pre>[GhostFeed] OrbitalWatch: demo
+[GhostFeed] AgroWatch: demo
+[GhostFeed] CyberDefense: demo</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMY & DOCS -->
+<section id="academy" class="panel" style="display:none;">
+  <h2>🎓 GhostTrack Academy & Docs</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📖 Come leggere la telemetria</h3>
+      <p class="small">
+        Uptime → stabilità del nodo<br>
+        Load Avg → carico di lavoro<br>
+        Disco → spazio residuo<br>
+        Stato → OK / WARN / CRIT
+      </p>
+    </div>
+    <div class="card">
+      <h3>📘 Documentazione</h3>
+      <p class="small">
+        - Architettura<br>
+        - Domini<br>
+        - Moduli<br>
+        - Filosofia<br>
+        - Roadmap
+      </p>
+      <p class="small">Questa sezione può puntare alla Wiki su GitHub.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CITIZEN SCIENCE -->
+<section id="citizen" class="panel" style="display:none;">
+  <h2>✨ Citizen Science Hub</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📓 Osservazioni</h3>
+      <pre>[Osservazione] 2026-01-08
+Fauna: demo
+Flora: demo
+Anomalie: demo</pre>
+      <p class="small">Spazio per note su flora, fauna, fenomeni locali.</p>
+    </div>
+    <div class="card">
+      <h3>📤 Esportazione (concetto)</h3>
+      <p class="small">
+        I dati possono essere esportati manualmente in formato CSV/JSON<br>
+        per analisi esterne o condivisione con enti.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ASTRO-TELEMETRIA -->
+<section id="astro" class="panel" style="display:none;">
+  <h2>🔭 Astro‑Telemetria & “Astrologia Tecnica”</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌠 Cielo del Nodo (demo)</h3>
+      <pre>
+[✶] Costellazione tecnica:
+    - CyberDefense
+    - AgroWatch
+    - OrbitalWatch
+    - MeshNode
+      </pre>
+      <p class="small">Rappresentazione simbolica: ogni modulo è una “stella” nella costellazione del nodo.</p>
+    </div>
+    <div class="card">
+      <h3>🜁 “Oroscopo del Nodo” (metafora)</h3>
+      <p class="small">
+        - Se i moduli agro sono forti → giornata favorevole a osservazioni ambientali.<br>
+        - Se la rete è instabile → prudenza nelle sincronizzazioni.<br>
+        - Se OrbitalWatch è attivo → buona finestra per osservazioni satellitari.
+      </p>
+      <p class="small">È una metafora operativa, non astrologia reale.</p>
+    </div>
+  </div>
+</section>
+
 <script>
-/* MENU */
-document.getElementById("gt-menu-btn").onclick = function() {
-  const panel = document.getElementById("gt-menu-panel");
-  panel.style.display = (panel.style.display === "block") ? "none" : "block";
-};
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
 
-/* TELEMETRIA LIVE */
-function loadTelemetry() {
-    fetch("telemetry.json")
-        .then(r => r.json())
-        .then(data => {
-            document.getElementById("telemetry-box").innerHTML = `
-                <b>Uptime:</b> ${data.uptime}<br>
-                <b>Load Avg:</b> ${data.loadavg}<br>
-                <b>Disco:</b> ${data.disk_usage}<br>
-                <b>IP:</b> ${data.ip_address}<br>
-                <b>Timestamp:</b> ${data.timestamp_utc}<br>
-                <b>Status:</b> ${data.status}
-            `;
-        })
-        .catch(() => {
-            document.getElementById("telemetry-box").innerHTML =
-                "Impossibile caricare la telemetria.";
-        });
-}
-
-/* MENU ACTIONS */
-function gtShowTelemetry() {
-  loadTelemetry();
-  alert("Telemetria aggiornata.");
-}
-
-function gtShowNodeInfo() {
-  alert("🛰 Nodo Pragone\nLocalità: Pietra de’ Giorgi\nStato: Online\nHeartbeat: Attivo");
-}
-
-function gtShowAtlas() {
-  alert("🌍 Live Atlas\nIl globo 3D verrà integrato qui.");
-}
-
-function gtShowSystem() {
-  alert("⚙ Sistema GhostTrack‑v2\nModalità: Offline‑First\nRituali: Master, Omega, Telemetry, Full, Repair");
-}
-
-function gtSurprise() {
-  alert("✨ Sorpresa!\nIl nodo Pragone è ora parte della costellazione.\nOgni slot è un futuro battito.\nOgni placeholder è una promessa.");
-}
-
-/* AUTOLOAD */
-loadTelemetry();
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.style.display = 'none');
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).style.display = 'block';
+  });
+});
 </script>
 
 </body>
 </html>
-
