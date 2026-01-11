@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <title>dr. HighKali — AGI Console</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#0f1720;color:#e6eef8;padding:18px}
+    .card{background:#0b1220;border:1px solid #1f2a3a;padding:14px;border-radius:8px;margin-bottom:12px}
+    h1{margin:0 0 8px 0;font-size:20px}
+    pre{background:#07101a;padding:12px;border-radius:6px;overflow:auto}
+    .btn{display:inline-block;padding:8px 12px;border-radius:6px;background:#1f6feb;color:white;text-decoration:none}
+    .muted{color:#9fb0c8;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="card"><h1>dr. HighKali</h1><div class="muted">AGI orchestratore — conoscenza dalla A alla Z. Non senziente.</div></div>
+  <div class="card"><strong>Stato moduli</strong><div id="modules" class="muted" style="margin-top:8px">Caricamento…</div></div>
+  <div class="card"><strong>Prompt rapido</strong><textarea id="prompt" rows="4" style="width:100%;margin-top:8px" placeholder="Chiedi a dr. HighKali..."></textarea><div style="margin-top:8px"><a id="askBtn" class="btn">Interroga</a></div></div>
+  <div class="card"><strong>Output</strong><pre id="output">Nessuna richiesta ancora eseguita.</pre></div>
+  <script>
+    const API_BASE = (window.GT_CONFIG && window.GT_CONFIG.api_base_url) ? window.GT_CONFIG.api_base_url : '/api';
+    async function loadModules(){
+      try{
+        const r = await fetch(API_BASE + '/status');
+        const j = await r.json();
+        const modules = j.modules ? Object.keys(j.modules).map(m => '- ' + m).join('\\n') : 'Nessun modulo rilevato';
+        document.getElementById('modules').textContent = modules;
+      }catch(e){
+        document.getElementById('modules').textContent = 'Impossibile contattare API: ' + e.message;
+      }
+    }
+    document.getElementById('askBtn').addEventListener('click', async ()=>{
+      const prompt = document.getElementById('prompt').value.trim();
+      if(!prompt){ alert('Inserisci una richiesta sintetica'); return; }
+      document.getElementById('output').textContent = 'Elaborazione in corso...';
+      try{
+        const r = await fetch(API_BASE + '/agi/query', {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({agent:'dr_highkali', prompt})
+        });
+        const j = await r.json();
+        document.getElementById('output').textContent = j.result || JSON.stringify(j, null, 2);
+      }catch(e){
+        document.getElementById('output').textContent = 'Errore: ' + e.message;
+      }
+    });
+    loadModules();
+  </script>
+</body>
+</html>
