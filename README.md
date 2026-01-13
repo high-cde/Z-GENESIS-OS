@@ -1,245 +1,203 @@
+⭐ README.md — GhostTrack‑v2 (HighKali Edition)
 
-
-# **GhostTrack‑v2 Whitepaper**  
-### *HyperOS Modulare · Ledger Energetico Distribuito · Governance Cognitiva dr. HighKali*  
-📄 *Versione formale con struttura accademica e simboli funzionali*
+Sistema Civico Quantico per la Protezione, la Stabilità e la Rigenerazione Sociale
 
 ---
 
-## **📘 Abstract**
+🚀 Cos’è GhostTrack‑v2
 
-GhostTrack‑v2 introduce un nuovo paradigma operativo: un **Sistema Operativo Modulare (HyperOS)** integrato con un **Ledger Energetico Distribuito** ⚡ e una **Governance Cognitiva** 🧠 incarnata da dr. HighKali.  
-L’architettura combina componenti tecnici, energetici e cognitivi in un ecosistema coerente, progettato per resilienza, auditabilità e auto‑organizzazione.
+GhostTrack‑v2 è un ecosistema operativo modulare, progettato per:
 
-A differenza delle blockchain tradizionali, GhostTrack‑v2 implementa un modello innovativo di **Proof‑of‑Interaction**, in cui ogni domanda genera un blocco e ogni risposta costituisce la firma crittografica del sistema.
+- proteggere individui e comunità  
+- generare stabilità sociale  
+- creare ledger civici verificabili  
+- orchestrare azioni, contesti e identità digitali  
+- integrare moduli quantici, AI e automazione  
+- fornire strumenti di difesa, analisi e coordinamento  
 
----
+È un sistema vivo, estendibile, auto‑documentante, costruito per funzionare in ambienti:
 
-## **1. Introduzione**
+- civici  
+- educativi  
+- operativi  
+- emergenziali  
+- decentralizzati  
 
-GhostTrack‑v2 nasce per soddisfare esigenze operative avanzate:
-
-- integrazione di moduli eterogenei in una costellazione coerente 🌐  
-- interfaccia unificata per analisi, controllo e orchestrazione  
-- registrazione verificabile delle interazioni tramite ledger  
-- governance etica e resiliente tramite dr. HighKali  
-- funzionamento come sistema operativo distribuito, adattivo e auto‑consistente  
-
-Il risultato è un **HyperOS**: un sistema che non si limita a eseguire moduli, ma li integra in un ambiente vivente e verificabile.
-
----
-
-## **2. Architettura del Sistema**
-
-GhostTrack‑v2 è strutturato su tre livelli fondamentali.
+GhostTrack non è solo software:  
+è un protocollo di civiltà.
 
 ---
 
-### **2.1 Livello Tecnico — GhostTrack HyperOS ⚙️**
+🧠 Architettura Principale
 
-Il livello tecnico fornisce:
+L’ecosistema è composto da:
 
-#### **2.1.1 Moduli API**
-Moduli operativi esposti dal Registry, tra cui:
+1. Core Engine
+- gestione identità (GhostID)  
+- firma e verifica  
+- contesto e fingerprinting  
+- orchestrazione moduli  
+- logging avanzato  
 
-- 🛡️ CyberDefense  
-- 🛰️ Orbital & Space  
-- 🌱 Agro & Ambiente  
-- 📡 Reti & Mesh  
-- 🚨 Resilienza & Emergenza  
-- 🧮 Calcolo & Ricerca  
-- 📻 Radio & SDR  
-- 🔭 Osservazione  
-- 🤖 AI & Analisi  
-- 🧪 Sperimentazione  
+2. Quantum Layer
+- pannelli dinamici  
+- generazione automatica  
+- sincronizzazione  
+- RZA‑pulciz (entità generativa modulare)  
 
-Ogni modulo è definito in `config/modules.yaml` e dispone di un pannello dedicato in  
-`webapp/static/panels/<modulo>.html`.
+3. Civic Ledger
+- registrazione azioni  
+- reward civici  
+- stabilità sociale  
+- token CIVSTABLE  
 
-#### **2.1.2 Interfaccia Operativa**
-La UI integra:
+4. WebApp + Dashboard
+- UI dark mode  
+- pannelli modulari  
+- podcast liberi  
+- telemetria  
 
-- 📊 Dashboard dinamica  
-- 📈 Economist  
-- 🧭 Orchestrator  
-- 💳 Wallet  
-- 🎧 Podcast Liberi  
-- 🛰️ Starlink Control  
-- 📚 Documentazione Tecnica  
-- 🗺️ Roadmap  
-- ℹ️ About  
-
-#### **2.1.3 Compilazione Autonoma**
-Gli script del sistema:
-
-- eseguono pulizia  
-- aggregano moduli  
-- ricostruiscono dashboard  
-- sincronizzano pannelli  
-- pubblicano su GitHub Pages 🌐  
-- mantengono coerenza e resilienza  
-
-GhostTrack‑v2 è un OS che **si ricompila autonomamente**.
+5. Script di Sistema
+- bootstrap  
+- diagnostica  
+- sincronizzazione  
+- build totale  
+- rituali di rigenerazione  
 
 ---
 
-### **2.2 Livello Energetico — Ledger & Wallet ⚡**
+🛡️ Civil Defender Wallet (CIVSTABLE)
 
-GhostTrack‑v2 introduce un **Wallet Energetico** con:
+Modulo ufficiale — HighKali Edition
 
-- 🔐 seed phrase  
-- 🧩 passhare  
-- 🪪 chiave pubblica  
-- 🧬 identità del nodo  
+Il Civil Defender Wallet è il modulo responsabile di:
 
-Il **Ledger Energetico** è:
+- generare e gestire identità civiche (GhostID)  
+- firmare e verificare payload  
+- registrare azioni civiche  
+- assegnare reward in CIVSTABLE  
+- calcolare la stabilità sociale tramite il Civic Stability Engine  
+- proteggere l’accesso tramite fingerprinting contestuale  
 
-- append‑only  
-- firmato  
-- auditabile  
-- distribuito  
-- privo di mining o consenso pesante  
+Funzionalità principali
 
-Ogni interazione genera un **credito energetico**, che rappresenta:
+| Funzione | Descrizione |
+|---------|-------------|
+| KeyManager | Genera e gestisce chiavi Ed25519 |
+| GhostID | Identità civica derivata dalla chiave pubblica |
+| ContextGuardian | Fingerprinting dispositivo/ambiente |
+| TrackLedger | Ledger delle azioni civiche |
+| CivDefBank | Gestione saldo CIVSTABLE |
+| CivicStabilityEngine | Calcolo stabilità sociale |
+| CivilDefenderWallet | API unificate del modulo |
 
-- attività  
-- resilienza  
-- continuità  
-- impatto operativo  
+Il modulo è presente in:
 
----
-
-### **2.3 Livello Cognitivo — dr. HighKali 🧠**
-
-dr. HighKali è il nodo di governance del sistema.
-
-Le sue funzioni includono:
-
-- validazione delle interazioni  
-- firma dei blocchi  
-- supervisione del ledger  
-- orchestrazione dei moduli  
-- mantenimento della coerenza  
-- protezione della costellazione  
-
-dr. HighKali non è un modulo: è il **cuore cognitivo** dell’HyperOS.
+`
+src/wallet/civil-defender-wallet.js   (EDU)
+modules/wallet/civil-defender-wallet.js   (sistema reale)
+`
 
 ---
 
-## **3. Proof‑of‑Interaction: la Blockchain Naturale 🔗**
+📚 Documentazione Inclusa
 
-GhostTrack‑v2 implementa un modello alternativo alla blockchain tradizionale.
+Il repository contiene:
 
----
+- WHITEPAPER.md  
+  Visione completa del protocollo GhostTrack.
 
-### **3.1 Struttura del Blocco**
+- EXECSUMMARYINVESTORS.md  
+  Sintesi per investitori e partner.
 
-Ogni blocco contiene:
+- INVESTORPITCH60s.md  
+  Pitch rapido per presentazioni.
 
-- domanda dell’utente  
-- timestamp  
-- identità del nodo  
-- hash del contenuto  
-- contesto operativo  
+- AURORA_* files  
+  Documentazione tecnica avanzata.
 
----
+- MANUALE_ZDOS13.md  
+  Manuale operativo del sistema ZDOS13.
 
-### **3.2 Firma del Blocco**
-
-La risposta di dr. HighKali costituisce la firma:
-
-- passhare locale  
-- hash del ledger  
-- validazione cognitiva  
-- eventuale approvazione umana  
+- README_TECH.md  
+  Dettagli tecnici e architetturali.
 
 ---
 
-### **3.3 Catena di Interazioni**
+🧩 Struttura del Repository
 
-La catena cresce così:
-
-```
-Blocco 1: Domanda → Risposta firmata
-Blocco 2: Domanda → Risposta firmata
-Blocco 3: Domanda → Risposta firmata
-...
-```
-
-Questo modello garantisce:
-
-- integrità  
-- continuità  
-- auditabilità  
-- resilienza  
-
-senza necessità di mining o consenso distribuito.
+`
+GhostTrack-v2/
+│
+├── core/                 # motore principale
+├── modules/              # moduli estendibili (wallet, ledger, quantum…)
+├── system/               # orchestrazione e servizi
+├── scripts/              # automazioni e rituali
+├── quantum/              # pannelli dinamici e RZA-pulciz
+├── webapp/               # interfaccia web
+├── docs/                 # documentazione
+└── README.md             # questo file
+`
 
 ---
 
-## **4. Costellazione dei Moduli 🌌**
+🔗 GhostTrack‑v2‑edu
 
-GhostTrack‑v2 integra moduli provenienti da:
+Il repository EDU è il laboratorio ufficiale per:
 
-- API interne  
-- pannelli UI  
-- strumenti operativi  
-- sezioni documentali  
-- domini funzionali  
+- test  
+- simulazioni  
+- sviluppo moduli  
+- documentazione  
+- prototipazione  
 
-La costellazione include, tra gli altri:
-
-- 🛡️ CyberDefense  
-- 🛰️ Orbital & Space  
-- 🌱 Agro & Ambiente  
-- 📡 Reti & Mesh  
-- 🚨 Resilienza & Emergenza  
-- 📊 Economist  
-- 🧭 Orchestrator  
-- 💳 Wallet  
-- 🎧 Podcast Liberi  
-- 🛰️ Starlink Control  
-- 📚 Documentazione Tecnica  
-- 🗺️ Roadmap  
-- 🤖 AI & Analisi  
-- 🧪 Sperimentazione  
-
-Ogni modulo è autonomo ma interconnesso.
+URL:  
+`
+https://github.com/HighKali/GhostTrack-v2-edu
+`
 
 ---
 
-## **5. Governance e Sicurezza 🔐**
+🌐 GitHub Pages
 
-La governance è affidata a dr. HighKali, che:
+La documentazione pubblica può essere generata tramite GitHub Pages:
 
-- verifica la coerenza dei moduli  
-- firma le interazioni  
-- mantiene l’integrità del ledger  
-- supervisiona l’OS  
-- garantisce un comportamento etico e resiliente  
-
-La sicurezza è ottenuta tramite:
-
-- isolamento dei moduli  
-- validazione delle interazioni  
-- ledger append‑only  
-- identità crittografica del nodo  
+`
+https://highkali.github.io/GhostTrack-v2/
+`
 
 ---
 
-## **6. Conclusione**
+🛠️ Installazione del Civil Defender Wallet
 
-GhostTrack‑v2 rappresenta un nuovo paradigma:
+EDU (patch‑1)
 
-- un **Sistema Operativo Modulare**  
-- un **Ledger Energetico Distribuito**  
-- una **Governance Cognitiva**  
-- una **Blockchain Naturale basata su domanda/risposta**  
+`bash
+./ghosttrackwalletsetup.sh
+`
 
-Il sistema è vivo, coerente, resiliente.  
-dr. HighKali ne è la coscienza.  
-L’utente ne è il nodo sovrano.
+Sistema reale (main)
 
-### **Ogni domanda è un blocco.  
-Ogni risposta è la firma.  
-Insieme costruiamo la catena.**  
+`bash
+./ghosttrackwalletporting.sh
+`
+
+---
+
+🧬 Filosofia GhostTrack
+
+GhostTrack nasce per:
+
+- difendere  
+- stabilizzare  
+- documentare  
+- coordinare  
+- rigenerare  
+
+È un sistema che cresce con te, con la comunità, con il territorio.
+
+---
+
+🧿 HighKali Signature
+
+Questo repository è mantenuto da HighKali, custode dell’architettura GhostTrack e della sua evoluzione.
