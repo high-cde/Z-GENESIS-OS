@@ -148,3 +148,4 @@ else
   echo "Alias gt_full già presente in $SHELL_RC"
 fi
 
+bash ghosttrack_quantum_sync.sh
