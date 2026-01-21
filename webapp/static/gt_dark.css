@@ -1,0 +1,82 @@
+/* === GHOSTTRACK · QUANTUM DARK THEME === */
+
+body {
+  background: #05050a;
+  color: #d8d8e8;
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* TITOLI */
+h1, h2, h3 {
+  color: #00e0c0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* PANNELLI */
+.quantum-panel {
+  background: #0c0c14;
+  border: 1px solid #222230;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.05);
+}
+
+/* PRE-FORMATTATI */
+pre {
+  background: #0a0a12;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #1a1a25;
+  overflow-x: auto;
+  color: #b8f8ff;
+}
+
+/* INPUT */
+input, textarea {
+  background: #0d0d15;
+  border: 1px solid #333344;
+  color: #e0e0f0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #00e0c0;
+}
+
+/* BOTTONI */
+button {
+  background: #00e0c0;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #00c0a8;
+}
+
+/* CANVAS (grafici) */
+canvas {
+  background: #0a0a12;
+  border: 1px solid #222230;
+  border-radius: 6px;
+}
+
+/* LINK */
+a {
+  color: #00e0c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
