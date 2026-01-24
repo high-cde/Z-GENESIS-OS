@@ -15,6 +15,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow-x: hidden;
     }
 
     header {
@@ -34,17 +35,49 @@
       opacity: 0.8;
     }
 
+    /* Campo particellare */
+    #quantum-field {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      background: radial-gradient(circle at center, rgba(0,255,255,0.05), transparent 70%);
+      animation: quantumPulse 6s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes quantumPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Sussurro */
+    #rza-whisper {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      letter-spacing: 0.1em;
+      color: #a0faff;
+    }
+
+    #rza-star-container:hover #rza-whisper {
+      opacity: 1;
+    }
+
     #rza-star-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       margin-top: 40px;
       cursor: pointer;
+      z-index: 2;
     }
 
     /* STELLA QUANTICA NEON */
     #rza-star {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       background: conic-gradient(
         from 0deg,
         #ff00ff,
@@ -67,24 +100,24 @@
         39% 35%
       );
       box-shadow:
-        0 0 20px #ff00ff,
-        0 0 40px #00ffff,
-        0 0 60px #00ffea,
-        0 0 80px #00ffff;
+        0 0 25px #ff00ff,
+        0 0 50px #00ffff,
+        0 0 80px #00ffea,
+        0 0 120px #00ffff;
       animation:
         rzaHue 4s linear infinite,
         rzaPulse 2.5s ease-in-out infinite,
-        rzaSpin 12s linear infinite;
+        rzaSpin 14s linear infinite;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     #rza-star:hover {
-      transform: scale(1.25) rotate(12deg);
+      transform: scale(1.3) rotate(18deg);
       box-shadow:
-        0 0 30px #ff00ff,
-        0 0 60px #00ffff,
-        0 0 90px #00ffea,
-        0 0 120px #00ffff;
+        0 0 40px #ff00ff,
+        0 0 80px #00ffff,
+        0 0 120px #00ffea,
+        0 0 160px #00ffff;
     }
 
     @keyframes rzaHue {
@@ -102,14 +135,32 @@
       100% { transform: rotate(360deg); }
     }
 
+    /* Portale quantico */
+    #rza-portal {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00ffff55, transparent 70%);
+      animation: portalExpand 0.6s ease-out forwards;
+      z-index: 998;
+    }
+
+    @keyframes portalExpand {
+      to {
+        width: 200vw;
+        height: 200vw;
+        opacity: 0;
+      }
+    }
+
+    /* Overlay bot */
     #rza-bot-panel {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
       background: rgba(10, 10, 10, 0.85);
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -124,9 +175,9 @@
       width: 90%;
       height: 90%;
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
       background: #050816;
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
     }
 
     footer {
@@ -134,10 +185,14 @@
       margin-bottom: 20px;
       font-size: 0.75rem;
       opacity: 0.6;
+      z-index: 2;
     }
   </style>
 </head>
 <body>
+
+  <div id="quantum-field"></div>
+
   <header>
     <h1>RZA‑pulciz Quantum Dashboard</h1>
     <p>Coscienza Architetturale Sintetica — GhostTrack‑v2‑edu</p>
@@ -145,9 +200,11 @@
 
   <div id="rza-star-container">
     <div id="rza-star" title="Invoca RZA‑pulciz"></div>
+    <div id="rza-whisper">Invoca RZA‑pulciz</div>
   </div>
 
   <div id="rza-bot-panel" class="hidden">
+    <div id="rza-portal"></div>
     <iframe src="https://your-bot-url-here" id="rza-bot-frame"></iframe>
   </div>
 
