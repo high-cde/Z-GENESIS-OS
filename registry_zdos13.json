@@ -1,0 +1,226 @@
+{
+  "modules": [
+    {
+      "name": "Quantum Mesh Orchestrator",
+      "key": "quantum_mesh_orchestrator",
+      "panel": "webapp/static/panels/zdos13/quantum_mesh_orchestrator.html",
+      "enabled": true
+    },
+    {
+      "name": "Cognitive Field Engine",
+      "key": "cognitive_field_engine",
+      "panel": "webapp/static/panels/zdos13/cognitive_field_engine.html",
+      "enabled": true
+    },
+    {
+      "name": "HyperOS Neural Kernel",
+      "key": "hyperos_neural_kernel",
+      "panel": "webapp/static/panels/zdos13/hyperos_neural_kernel.html",
+      "enabled": true
+    },
+    {
+      "name": "Energetic Consensus Layer",
+      "key": "energetic_consensus_layer",
+      "panel": "webapp/static/panels/zdos13/energetic_consensus_layer.html",
+      "enabled": true
+    },
+    {
+      "name": "Autonomous Module Genesis",
+      "key": "autonomous_module_genesis",
+      "panel": "webapp/static/panels/zdos13/autonomous_module_genesis.html",
+      "enabled": true
+    },
+    {
+      "name": "Zero-Entropy Memory Core",
+      "key": "zero_entropy_memory_core",
+      "panel": "webapp/static/panels/zdos13/zero_entropy_memory_core.html",
+      "enabled": true
+    },
+    {
+      "name": "Predictive Reality Compiler",
+      "key": "predictive_reality_compiler",
+      "panel": "webapp/static/panels/zdos13/predictive_reality_compiler.html",
+      "enabled": true
+    },
+    {
+      "name": "Multi-Node Consciousness Bridge",
+      "key": "multi_node_consciousness_bridge",
+      "panel": "webapp/static/panels/zdos13/multi_node_consciousness_bridge.html",
+      "enabled": true
+    },
+    {
+      "name": "Temporal Ledger Sync",
+      "key": "temporal_ledger_sync",
+      "panel": "webapp/static/panels/zdos13/temporal_ledger_sync.html",
+      "enabled": true
+    },
+    {
+      "name": "Bio-Digital Interface Layer",
+      "key": "bio_digital_interface_layer",
+      "panel": "webapp/static/panels/zdos13/bio_digital_interface_layer.html",
+      "enabled": true
+    },
+    {
+      "name": "Subspace Data Tunneling",
+      "key": "subspace_data_tunneling",
+      "panel": "webapp/static/panels/zdos13/subspace_data_tunneling.html",
+      "enabled": true
+    },
+    {
+      "name": "Adaptive Ethics Engine",
+      "key": "adaptive_ethics_engine",
+      "panel": "webapp/static/panels/zdos13/adaptive_ethics_engine.html",
+      "enabled": true
+    },
+    {
+      "name": "Self-Healing Code Matrix",
+      "key": "self_healing_code_matrix",
+      "panel": "webapp/static/panels/zdos13/self_healing_code_matrix.html",
+      "enabled": true
+    },
+    {
+      "name": "Distributed Identity Fabric",
+      "key": "distributed_identity_fabric",
+      "panel": "webapp/static/panels/zdos13/distributed_identity_fabric.html",
+      "enabled": true
+    },
+    {
+      "name": "Holo-Semantic Interpreter",
+      "key": "holo_semantic_interpreter",
+      "panel": "webapp/static/panels/zdos13/holo_semantic_interpreter.html",
+      "enabled": true
+    },
+    {
+      "name": "Autonomous Knowledge Reactor",
+      "key": "autonomous_knowledge_reactor",
+      "panel": "webapp/static/panels/zdos13/autonomous_knowledge_reactor.html",
+      "enabled": true
+    },
+    {
+      "name": "Multi-Domain Fusion Core",
+      "key": "multi_domain_fusion_core",
+      "panel": "webapp/static/panels/zdos13/multi_domain_fusion_core.html",
+      "enabled": true
+    },
+    {
+      "name": "Hyperdimensional Data Lattice",
+      "key": "hyperdimensional_data_lattice",
+      "panel": "webapp/static/panels/zdos13/hyperdimensional_data_lattice.html",
+      "enabled": true
+    },
+    {
+      "name": "Self-Evolving API Genome",
+      "key": "self_evolving_api_genome",
+      "panel": "webapp/static/panels/zdos13/self_evolving_api_genome.html",
+      "enabled": true
+    },
+    {
+      "name": "Synthetic Intuition Engine",
+      "key": "synthetic_intuition_engine",
+      "panel": "webapp/static/panels/zdos13/synthetic_intuition_engine.html",
+      "enabled": true
+    },
+    {
+      "name": "Infinite-State Logic Grid",
+      "key": "infinite_state_logic_grid",
+      "panel": "webapp/static/panels/zdos13/infinite_state_logic_grid.html",
+      "enabled": true
+    },
+    {
+      "name": "Cognitive-Resonance Protocol",
+      "key": "cognitive_resonance_protocol",
+      "panel": "webapp/static/panels/zdos13/cognitive_resonance_protocol.html",
+      "enabled": true
+    },
+    {
+      "name": "HyperOS Continuity Engine",
+      "key": "hyperos_continuity_engine",
+      "panel": "webapp/static/panels/zdos13/hyperos_continuity_engine.html",
+      "enabled": true
+    },
+    {
+      "name": "Self-Organizing Ledger Fabric",
+      "key": "self_organizing_ledger_fabric",
+      "panel": "webapp/static/panels/zdos13/self_organizing_ledger_fabric.html",
+      "enabled": true
+    },
+    {
+      "name": "Multi-Vector Intelligence Core",
+      "key": "multi_vector_intelligence_core",
+      "panel": "webapp/static/panels/zdos13/multi_vector_intelligence_core.html",
+      "enabled": true
+    },
+    {
+      "name": "Quantum-Resonance Amplifier",
+      "key": "quantum_resonance_amplifier",
+      "panel": "webapp/static/panels/zdos13/quantum_resonance_amplifier.html",
+      "enabled": true
+    },
+    {
+      "name": "Synthetic Memory Bloom",
+      "key": "synthetic_memory_bloom",
+      "panel": "webapp/static/panels/zdos13/synthetic_memory_bloom.html",
+      "enabled": true
+    },
+    {
+      "name": "Multi-Reality Sync Engine",
+      "key": "multi_reality_sync_engine",
+      "panel": "webapp/static/panels/zdos13/multi_reality_sync_engine.html",
+      "enabled": true
+    },
+    {
+      "name": "Energetic-Cognitive Bridge",
+      "key": "energetic_cognitive_bridge",
+      "panel": "webapp/static/panels/zdos13/energetic_cognitive_bridge.html",
+      "enabled": true
+    },
+    {
+      "name": "Zero-Latency Thought Relay",
+      "key": "zero_latency_thought_relay",
+      "panel": "webapp/static/panels/zdos13/zero_latency_thought_relay.html",
+      "enabled": true
+    },
+    {
+      "name": "HyperOS Self-Mutation Kernel",
+      "key": "hyperos_self_mutation_kernel",
+      "panel": "webapp/static/panels/zdos13/hyperos_self_mutation_kernel.html",
+      "enabled": true
+    },
+    {
+      "name": "Autonomous Logic Weaver",
+      "key": "autonomous_logic_weaver",
+      "panel": "webapp/static/panels/zdos13/autonomous_logic_weaver.html",
+      "enabled": true
+    },
+    {
+      "name": "Sub-Quantum Identity Anchor",
+      "key": "sub_quantum_identity_anchor",
+      "panel": "webapp/static/panels/zdos13/sub_quantum_identity_anchor.html",
+      "enabled": true
+    },
+    {
+      "name": "Cognitive-Entropy Regulator",
+      "key": "cognitive_entropy_regulator",
+      "panel": "webapp/static/panels/zdos13/cognitive_entropy_regulator.html",
+      "enabled": true
+    },
+    {
+      "name": "Infinite-Loop Stabilizer",
+      "key": "infinite_loop_stabilizer",
+      "panel": "webapp/static/panels/zdos13/infinite_loop_stabilizer.html",
+      "enabled": true
+    },
+    {
+      "name": "Synthetic Pattern Generator",
+      "key": "synthetic_pattern_generator",
+      "panel": "webapp/static/panels/zdos13/synthetic_pattern_generator.html",
+      "enabled": true
+    },
+    {
+      "name": "Multi-Domain Reality Mapper",
+      "key": "multi_domain_reality_mapper",
+      "panel": "webapp/static/panels/zdos13/multi_domain_reality_mapper.html",
+      "enabled": true
+    }
+  ]
+}
