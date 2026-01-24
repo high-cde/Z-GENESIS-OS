@@ -193,3 +193,7 @@ Tecnologie oltre lo stato dell’arte:
 ### **Ogni domanda è un blocco.  
 Ogni risposta è la firma.  
 Insieme costruiamo la catena.**
+
+
+## Aurora‑Chain
+Whitepaper: [AURORA_WHITEPAPER.md](AURORA_WHITEPAPER.md)
