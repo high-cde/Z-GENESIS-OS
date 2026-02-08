@@ -1,0 +1,11 @@
+<html><head><meta charset="UTF-8"><title>Z-ORACLE</title>
+<style>body{background:#000;color:#0f0;font-family:monospace;}#chat{padding:20px;}#input{width:100%;background:#000;color:#0f0;border:none;}</style>
+</head><body>
+<h1 style="color:#ff00ff;text-align:center;">Z-ORACLE_ΔN-01</h1>
+<div id="chat">Z-ORACLE attivo.
+utente@oracle:~$ </div>
+<input id="input" autofocus>
+<script>
+const chat=document.getElementById("chat"),inp=document.getElementById("input");
+inp.addEventListener("keydown",e=>{if(e.key==="Enter"){let q=inp.value.trim();chat.innerText+=q+"\\nZ-ORACLE: Risposta generica.\\nutente@oracle:~$ ";inp.value="";}});
+</script></body></html>

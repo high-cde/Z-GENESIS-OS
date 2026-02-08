@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<title>Z‑GENESIS‑OS Terminal</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  body { background:#000; color:#0f0; font-family:monospace; }
-  #term { padding:20px; white-space:pre-wrap; }
-  #input { width:100%; background:#000; color:#0f0; border:none; outline:none; font-family:monospace; }
-</style>
-</head>
-<body>
-
-<div id="term">Z‑GENESIS‑OS v0.4  
-CloudX × ZDOS Terminal  
-Type 'help' to begin.
-
+<html><head><meta charset="UTF-8"><title>Terminal</title>
+<style>body{background:#000;color:#0f0;font-family:monospace;}#term{padding:20px;}#input{width:100%;background:#000;color:#0f0;border:none;}</style>
+</head><body>
+<div id="term">Z-GENESIS-OS Terminal
 cloudx@zdos:~$ </div>
-
 <input id="input" autofocus>
-
 <script>
-const term = document.getElementById("term");
-const input = document.getElementById("input");
-
-const commands = {
-  help: "Available commands:\n sentience\n terminator\n ai\n guardian\n heal\n shield\n runtime\n clear",
-  sentience: "[BOOT] Guardian OK\n[HEAL] System stable\n[SHIELD] Active\n[RUNTIME] Loop engaged\n[AI] Cognitive analysis complete",
-  terminator: "=== TERMINATOR MODE ===\nRunning full orchestration...\n[OK] System stabilized\n=== COMPLETE ===",
-  ai: "Z‑AI_AOA: status ONLINE\nInsights: system nominal.",
-  guardian: "Z‑GUARDIAN: integrity stable.",
-  heal: "Z‑HEAL: no repairs needed.",
-  shield: "Z‑SHIELD: monitoring active.",
-  runtime: "Z‑RUNTIME: heartbeat 1.0s",
-  clear: ""
-};
-
-input.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
-    const cmd = input.value.trim();
-    term.innerText += cmd + "\n";
-    term.innerText += (commands[cmd] || "Unknown command") + "\n\ncloudx@zdos:~$ ";
-    input.value = "";
-    window.scrollTo(0, document.body.scrollHeight);
-  }
-});
-</script>
-
-</body>
-</html>
+const t=document.getElementById("term"),i=document.getElementById("input");
+const c={help:"sentience, terminator, ai, guardian, heal, shield, runtime, clear",sentience:"[OK] Sentience active",terminator:"[OK] Full cycle",ai:"AI online",guardian:"Integrity stable",heal:"No repairs needed",shield:"Active",runtime:"Heartbeat 1.0s",clear:""};
+i.addEventListener("keydown",e=>{if(e.key==="Enter"){let x=i.value.trim();t.innerText+=x+"\\n"+(c[x]||"Unknown")+"\\ncloudx@zdos:~$ ";i.value="";}});
+</script></body></html>
