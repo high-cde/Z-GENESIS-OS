@@ -1,0 +1,48 @@
+body {
+  margin:0;
+  background:#050509;
+  color:#eee;
+  font-family:system-ui, sans-serif;
+}
+
+.hero {
+  text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(135deg,#1a001a,#000);
+  color:#ff00ff;
+}
+
+.logo { font-size:10px; color:#ff00ff; }
+
+.subtitle { color:#ccc; margin-top:-10px; }
+
+.actions { margin-top:20px; }
+
+.btn {
+  padding:10px 20px;
+  border-radius:6px;
+  border:1px solid #444;
+  margin:5px;
+  color:#fff;
+  text-decoration:none;
+  font-family:monospace;
+}
+
+.primary { background:#ff00ff; }
+.danger { background:#ff0033; }
+.accent { background:#6600ff; }
+
+.content {
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  background:#0a0a12;
+  border:1px solid #222;
+  border-radius:10px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  color:#666;
+}
