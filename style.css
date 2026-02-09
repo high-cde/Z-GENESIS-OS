@@ -84,3 +84,22 @@ footer {
   transform:scale(0.96);
   box-shadow:0 0 10px #ff00ffaa;
 }
+
+.hacker-anim {
+  margin-top: 20px;
+  background: #000;
+  border: 1px solid #ff00ff55;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff00ff33;
+  height: 180px;
+  overflow: hidden;
+}
+
+#hack-stream {
+  color: #ff00ff;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.1;
+  text-shadow: 0 0 5px #ff00ff;
+}
