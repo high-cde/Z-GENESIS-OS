@@ -1,0 +1,5 @@
+// Z-GENESIS-OS - Sovereign ZDOS Enclave
+module Z-GENESIS-OS {
+    verify_zero_legacy();
+    connect_dsn_mesh();
+}
