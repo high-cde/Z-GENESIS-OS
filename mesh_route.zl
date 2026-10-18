@@ -1,0 +1,7 @@
+// ZDOS Mesh Routing Protocol - Node: Z-GENESIS-OS
+network_mesh {
+    node_id: "Z-GENESIS-OS";
+    status: "ACTIVE_SOVEREIGN";
+    routing_protocol: "Z-ROUTER-V4";
+    encryption: "ED25519-STRICT";
+}
